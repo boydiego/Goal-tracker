@@ -1,0 +1,18 @@
+<h1>Sign up</h1>
+
+<%= form_with model: @user, url: sign_up_path do |form| %>
+  <% if @user.errors.any? %>
+    <% @user.errors.full_messages.each do |message| %>
+    <%= message %>
+    <% end %>
+  <% end %>
+
+  <%= form.text_field :name, placeholder: "What's your name?" %>
+  <%= form.text_field :email, placeholder: "amazing@goals.com" %>
+  <%= form.password_field :password, placeholder: "password" %>
+  <%= form.password_field :password_confirmation, placeholder: "password" %>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
