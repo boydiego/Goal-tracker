@@ -1,0 +1,13 @@
+<h1>Edit password</h1>
+
+<%= form_with model: Current.user, url: edit_password_path do |form| %>
+  <%= form.password_field :password, placeholder: "password" %>
+  <%= form.password_field :password_confirmation, placeholder: "password" %>
+
+  <div>
+    <%= form.submit "Update password" %>
+  </div>
+  <div>
+    <%= link_to "Homepage", root_path %>
+  </div>
+<% end %>
