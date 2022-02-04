@@ -54,7 +54,7 @@
   transition: 500ms;
 }
 
-.image-gallery a::before {
+.image-gallery .effect-on::before {
   content: '';
   position: absolute;
   width: 100%;
@@ -62,41 +62,55 @@
   top: 0;
   left: 0;
   background-color: rgba(0,0,0, .6);
+  transition: 500ms;
+}
+
+.image-gallery .effect-on:hover .fa-plus,
+.image-gallery .effect-on:hover::before {
+  background-color: rgba(0,0,0, .3);
+}
+
+.image-gallery .effect-on:hover .fa-plus {
+  background-color: transparent;
+}
+
+.effect-off {
+  background-color: rgba(0,0,0, 0);
 }
 
 .img-1 {
   grid-area: img-1;
   min-height: 51.5rem;
-  background-image: url();
+  overflow: hidden;
 }
 .img-2 {
   grid-area: img-2;
-  background-image: url();
+  overflow: hidden;
 }
 .img-3 {
   grid-area: img-3;
-  background-image: url();
+  overflow: hidden;
 }
 .img-4 {
   grid-area: img-4;
-  background-image: url();
+  overflow: hidden;
 }
 .img-5 {
   grid-area: img-5;
-  background-image: url();
+  overflow: hidden;
 }
 .img-6 {
   grid-area: img-6;
   min-height: 51.5rem;
-  background-image: url();
+  overflow: hidden;
 }
 .img-7 {
   grid-area: img-7;
-  background-image: url();
+  overflow: hidden;
 }
 .img-8 {
   grid-area: img-8;
-  background-image: url();
+  overflow: hidden;
 }
 
 @media screen and (max-width: 900px) {
