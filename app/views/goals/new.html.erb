@@ -1,0 +1,18 @@
+<h1>Create a new Goal</h1>
+
+<%= form_with model: @goal do |form| %>
+  <% if form.object.errors.any? %>
+    <% form.object.errors.full_messages.each do |message| %>
+    <%= message %>
+    <% end %>
+  <% end %>
+
+  <%= form.text_field :title, placeholder: "What is your goal?" %>
+
+  <div>
+    <%= form.submit %>
+  </div>
+  <div>
+    <%= link_to "Homepage", root_path %>
+  </div>
+<% end %>
