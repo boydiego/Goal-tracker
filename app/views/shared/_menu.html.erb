@@ -3,9 +3,21 @@
     <i class="far fa-user fa-2x"></i>
   </div>
   <div class="menu">
+      <% if Current.user %>
+        <%= Current.user.name %>
+      <% end %>
     <ul>
-      <li class="menu-li"><i class="fas fa-cog fa-2x"></i><a href="#">Settings</a></li>
-      <li class="menu-li"><i class="fas fa-sign-out-alt fa-2x"></i><a href="#">Sign Up</a></li>
+      <li class="menu-li"><i class="fas fa-cog fa-2x"></i>
+      <a href="#">Settings</a></li>
+      <li class="menu-li">
+        <% if Current.user %>
+          <i class="fas fa-sign-out-alt fa-2x"></i>
+          <%= link_to "Log out", logout_path, method: :delete %>
+        <% else %>
+          <i class="fas fa-sign-in-alt fa-2x"></i>
+          <%= link_to "Log in", sign_in_path %>
+        <% end %>
+      </li>
     </ul>
   </div>
 </div>
