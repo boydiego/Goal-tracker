@@ -1,0 +1,13 @@
+<h1>Your Goals index</h1>
+
+<p>visionboard here ??</p>
+
+<% @goals.each do |goal| %>
+  <div>
+    <%= goal.title %>
+  </div>
+<% end %>
+
+<div>
+  <%= link_to "Homepage", root_path %>
+</div>

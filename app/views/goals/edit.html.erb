@@ -1,0 +1,12 @@
+<h1>Edit Goal</h1>
+
+<%= form_with model: @goal, url: goal_path, method: :patch do |form| %>
+  <%= form.text_field :title %>
+
+  <div>
+    <%= form.submit "Update Goal" %>
+  </div>
+  <div>
+    <%= link_to "Homepage", root_path %>
+  </div>
+<% end %>
