@@ -1,0 +1,20 @@
+<h1>Sign In</h1>
+
+<%= form_with url: sign_in_path do |form| %>
+  <%= form.text_field :email, placeholder: "amazing@goals.com" %>
+  <%= form.password_field :password, placeholder: "password" %>
+
+  <div>
+    <%= form.submit "Sign in" %>
+  </div>
+  <div>
+    <%= link_to "Homepage", root_path %>
+  </div>
+  <div>
+    <%= "Don't have an account yet?" %>
+    <%= "Create one now and conquer your goals!" %>
+  </div>
+  <div>
+    <%= link_to "Sign up", sign_up_path %>
+  </div>
+<% end %>
