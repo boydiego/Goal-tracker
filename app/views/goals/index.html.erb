@@ -4,44 +4,89 @@
 <div class="container">
   <div class="vision-container">
     <div class="image-gallery">
-      <a href="#" class="img-1">
-        <i class="fas fa-plus fa-2x"></i>
-      </a>
-      <a href="#" class="img-2">
-        <i class="fas fa-plus fa-2x"></i>
-      </a>
-      <a href="#" class="img-3">
-        <i class="fas fa-plus fa-2x"></i>
-      </a>
-      <a href="#" class="img-4">
-        <i class="fas fa-plus fa-2x"></i>
-      </a>
-      <a href="#" class="img-5">
-        <i class="fas fa-plus fa-2x"></i>
-      </a>
-      <a href="#" class="img-6">
-        <i class="fas fa-plus fa-2x"></i>
-      </a>
-      <a href="#" class="img-7">
-        <i class="fas fa-plus fa-2x"></i>
-      </a>
-      <a href="#" class="img-8">
-        <i class="fas fa-plus fa-2x"></i>
-      </a>
+
+      <% if @goals.first.present? %>
+        <a href="#" class="img-1 effect-off">
+          <%= image_tag @goals.first.image %>          
+        </a>
+      <% else %>
+        <a href="/goals/new" class="img-1 effect-on">
+          <i class="fas fa-plus fa-2x"></i>
+        </a>
+      <% end %>
+
+      <% if @goals.second.present? %>
+        <a href="#" class="img-2 effect-off">
+          <%= image_tag @goals.second.image %>          
+        </a>
+      <% else %>
+        <a href="/goals/new" class="img-2 effect-on">
+          <i class="fas fa-plus fa-2x"></i>
+        </a>
+      <% end %>
+
+      <% if @goals.third.present? %>
+        <a href="#" class="img-3 effect-off">
+          <%= image_tag @goals.third.image %>          
+        </a>
+      <% else %>
+        <a href="/goals/new" class="img-3 effect-on">
+          <i class="fas fa-plus fa-2x"></i>
+        </a>
+      <% end %>
+
+      <% if @goals.fourth.present? %>
+        <a href="#" class="img-4 effect-off">
+          <%= image_tag @goals.fourth.image %>          
+        </a>
+      <% else %>
+        <a href="/goals/new" class="img-4 effect-on">
+          <i class="fas fa-plus fa-2x"></i>
+        </a>
+      <% end %>
+
+      <% if @goals.fifth.present? %>
+        <a href="#" class="img-5 effect-off">
+          <%= image_tag @goals.fifth.image %>          
+        </a>
+      <% else %>
+        <a href="/goals/new" class="img-5 effect-on">
+          <i class="fas fa-plus fa-2x"></i>
+        </a>
+      <% end %>
+
+      <% if @goals[6].present? %>
+        <a href="#" class="img-6 effect-off">
+          <%= image_tag @goals.sixth.image %>          
+        </a>
+      <% else %>
+        <a href="/goals/new" class="img-6 effect-on">
+          <i class="fas fa-plus fa-2x"></i>
+        </a>
+      <% end %>
+
+      <% if @goals[7].present? %>
+        <a href="#" class="img-7 effect-off">
+          <%= image_tag @goals.seventh.image %>          
+        </a>
+      <% else %>
+        <a href="/goals/new" class="img-7 effect-on">
+          <i class="fas fa-plus fa-2x"></i>
+        </a>
+      <% end %>
+
+      <% if @goals[8].present? %>
+        <a href="#" class="img-8 effect-off">
+          <%= image_tag @goals.eighth.image %>          
+        </a>
+      <% else %>
+        <a href="/goals/new" class="img-8 effect-on">
+          <i class="fas fa-plus fa-2x"></i>
+        </a>
+      <% end %>
     </div>
   </div>
 </div>
-
-<br><br>
-<% @goals.each do |goal| %>
-  <div>
-    <%= goal.title %>
-  </div>
-<% end %>
-<br><br>
-
-<div>
-  <%= link_to "Homepage", root_path %>
+<div class="home-link">
+  <%= link_to "Home", root_path %>
 </div>
-
-<br><br>
