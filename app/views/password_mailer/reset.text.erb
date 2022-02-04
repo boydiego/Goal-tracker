@@ -1,0 +1,12 @@
+Hi <%= params[:user].email %>,
+
+we recieved a request to reset your password.
+
+If this was you, click the link to reset your password.
+
+The link will expire automatically in 15 minutes.
+
+<%= password_reset_edit_url(token: @token) %>
+
+Yours sincerely,
+Visionboard Goal Tracking Team

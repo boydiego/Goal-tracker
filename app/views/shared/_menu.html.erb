@@ -8,7 +8,7 @@
       <% end %>
     <ul>
       <li class="menu-li"><i class="fas fa-cog fa-2x"></i>
-      <a href="#">Settings</a></li>
+      <%= link_to "Settings", edit_password_path %>
       <li class="menu-li">
         <% if Current.user %>
           <i class="fas fa-sign-out-alt fa-2x"></i>
