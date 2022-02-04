@@ -1,13 +1,47 @@
-<h1>Your Goals index</h1>
+<div class="visionboard-header">
+  <h1>Vision Board</h1>
+</div>
+<div class="container">
+  <div class="vision-container">
+    <div class="image-gallery">
+      <a href="#" class="img-1">
+        <i class="fas fa-plus fa-2x"></i>
+      </a>
+      <a href="#" class="img-2">
+        <i class="fas fa-plus fa-2x"></i>
+      </a>
+      <a href="#" class="img-3">
+        <i class="fas fa-plus fa-2x"></i>
+      </a>
+      <a href="#" class="img-4">
+        <i class="fas fa-plus fa-2x"></i>
+      </a>
+      <a href="#" class="img-5">
+        <i class="fas fa-plus fa-2x"></i>
+      </a>
+      <a href="#" class="img-6">
+        <i class="fas fa-plus fa-2x"></i>
+      </a>
+      <a href="#" class="img-7">
+        <i class="fas fa-plus fa-2x"></i>
+      </a>
+      <a href="#" class="img-8">
+        <i class="fas fa-plus fa-2x"></i>
+      </a>
+    </div>
+  </div>
+</div>
 
-<p>visionboard here ??</p>
-
+<br><br>
 <% @goals.each do |goal| %>
   <div>
     <%= goal.title %>
   </div>
 <% end %>
+<br><br>
 
 <div>
   <%= link_to "Homepage", root_path %>
 </div>
+
+<br><br>
