@@ -7,6 +7,10 @@ function init() {
     showSettings.classList.toggle('active');
   });
 
+  titleContainer.addEventListener('click', function() {
+    titleContainer.classList.toggle('done')
+  })
+
 }
 
 document.addEventListener('DOMContentLoaded', init);
