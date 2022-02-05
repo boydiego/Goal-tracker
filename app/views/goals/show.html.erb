@@ -1,16 +1,21 @@
-<h1>Goal show page</h1>
-<%= @goal.title %>
-<%= image_tag @goal.image %>
+<div class="show-container">
+  <div class="show-settings">
+    <div class="edit-goal">
+      <%= link_to "Edit Goal", edit_goal_path %>
+    </div>
+    <div class="delete-goal">
+      <%= link_to "Delete Goal", goal_path, method: :delete %>
+    </div>
+  </div>
+  <div class="title-container">
+    <h1 class="show-title"><%= @goal.title %></h1>
+  </div>
+
+</div>
 
 <br><br>
 <h2>STEPS and Substeps will be shown here</h2>
 
-<div>
-  <%= link_to "Edit Goal", edit_goal_path %>
-</div>
-<div>
-  <%= link_to "Delete Goal", goal_path, method: :delete %>
-</div>
 
 <div>
   <%= link_to "Homepage", root_path %>
