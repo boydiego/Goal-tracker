@@ -1,0 +1,19 @@
+<% if Current.user %>
+  <div class="action-book">
+    <div class="profile-book">
+      <i class="far fa-bookmark fa-2x"></i>
+    </div>
+    <div class="menu-book">
+      <ul>
+        <li class="menu-li-book">
+          <i class="fas fa-bullseye fa-2x">
+        </i>
+        <%= link_to "Goals", goals_path %>
+        <li class="menu-li-book">
+          <i class="fas fa-home fa-2x"></i>
+          <%= link_to "Home", root_path %>
+        </li>
+      </ul>
+    </div>
+  </div>
+<% end %>

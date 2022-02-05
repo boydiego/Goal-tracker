@@ -3,9 +3,6 @@
     <i class="far fa-user fa-2x"></i>
   </div>
   <div class="menu">
-      <% if Current.user %>
-        <%= Current.user.name %>
-      <% end %>
     <ul>
       <li class="menu-li"><i class="fas fa-cog fa-2x"></i>
       <%= link_to "Settings", edit_password_path %>
