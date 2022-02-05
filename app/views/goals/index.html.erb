@@ -57,7 +57,7 @@
 
       <% if @goals[6].present? %>
         <a href="<%= goal_path(@goals[6].id) %>" class="img-6 effect-off">
-          <%= image_tag @goals.sixth.image %>          
+          <%= image_tag @goals[6].image %>          
         </a>
       <% else %>
         <a href="/goals/new" class="img-6 effect-on">
@@ -67,7 +67,7 @@
 
       <% if @goals[7].present? %>
         <a href="<%= goal_path(@goals[7].id) %>" class="img-7 effect-off">
-          <%= image_tag @goals.seventh.image %>          
+          <%= image_tag @goals[7].image %>          
         </a>
       <% else %>
         <a href="/goals/new" class="img-7 effect-on">
@@ -77,7 +77,7 @@
 
       <% if @goals[8].present? %>
         <a href="<%= goal_path(@goals[8].id) %>" class="img-8 effect-off">
-          <%= image_tag @goals.eighth.image %>          
+          <%= image_tag @goals[8].image %>          
         </a>
       <% else %>
         <a href="/goals/new" class="img-8 effect-on">
