@@ -7,7 +7,7 @@ class RegistrationsController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       session[:user_id] = @user.id
-      redirect_to root_path, notice: "Congratulations on your own account! 🎉"
+      redirect_to goals_path, notice: "Congratulations on your own account! 🎉"
     else
       render :new
     end
