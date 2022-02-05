@@ -122,6 +122,7 @@
   border-right: 1px solid rgba(255,255,255, .2);
   border-bottom: 1px solid rgba(255,255,255, .2);
   color: white;
+  text-shadow: 0 0 5px black;
   box-shadow: 0 5px 15px rgba(0,0,0, .05);
 }
 
@@ -136,6 +137,7 @@
   cursor: pointer;
   margin-bottom: 20px;
   font-weight: 600;
+  text-shadow: none;
 }
 
 .forget-box {
