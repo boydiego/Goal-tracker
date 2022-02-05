@@ -1,14 +1,3 @@
-.visionboard-header{
-  background-color: #1F1F1F;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-shadow: 0 0 5px black;
-  padding: 1.5rem 0;
-}
-
 .container {
   width: 100%;
   height: 100vh;
@@ -20,7 +9,7 @@
   width: 100%;
   max-height: 120rem;
   margin: auto;
-  padding: 0 1.5rem 1.5rem;
+  padding: 4rem 1.5rem 1.5rem;
 }
 
 .image-gallery {
@@ -79,39 +68,45 @@
   background-color: rgba(0,0,0, 0);
 }
 
+.all-img {
+  overflow: hidden;
+  transition: 500ms;
+  border: 1px solid rgba(255,255,255, .5);
+  border-right: 1px solid rgba(255,255,255, .2);
+  border-bottom: 1px solid rgba(255,255,255, .2);
+}
+
+.all-img:hover {
+  transform: scale( 1.05);
+  transition: 500ms;
+  box-shadow: 5px 5px 25px rgba(0,0,0, .8);
+}
+
 .img-1 {
   grid-area: img-1;
   min-height: 51.5rem;
-  overflow: hidden;
 }
 .img-2 {
   grid-area: img-2;
-  overflow: hidden;
 }
 .img-3 {
   grid-area: img-3;
-  overflow: hidden;
 }
 .img-4 {
   grid-area: img-4;
-  overflow: hidden;
 }
 .img-5 {
   grid-area: img-5;
-  overflow: hidden;
 }
 .img-6 {
   grid-area: img-6;
   min-height: 51.5rem;
-  overflow: hidden;
 }
 .img-7 {
   grid-area: img-7;
-  overflow: hidden;
 }
 .img-8 {
   grid-area: img-8;
-  overflow: hidden;
 }
 
 @media screen and (max-width: 900px) {

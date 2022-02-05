@@ -96,6 +96,8 @@
 .form-header {
   color: white;
   padding-bottom: 2rem;
+  font-size: 1.5rem;
+  text-shadow: 0 0 5px black;
 }
 
 .form form {
@@ -125,6 +127,7 @@
 
 .form form input::placeholder {
   color: white;
+  text-shadow: 0 0 5px black;
 }
 
 .form form input[type="submit"] {
@@ -142,6 +145,7 @@
 .forget {
   color: white;
   margin-top: 5px;
+  text-shadow: 0 0 5px black;
 }
 
 .forget a {
