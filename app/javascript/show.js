@@ -4,20 +4,20 @@ function init() {
   const showSettings = document.querySelector('.show-settings');
   const stepMarkers = document.querySelectorAll('.step-marker');
 
-  titleContainer.addEventListener('mouseover', function() {
+  titleContainer?.addEventListener('mouseover', function() {
     showSettings.classList.toggle('active');
   });
 
-  titleContainer.addEventListener('click', function() {
+  titleContainer?.addEventListener('click', function() {
     titleContainer.classList.toggle('done');
   })
 
-  stepMarkers.forEach(function(stepMarker) {
+  stepMarkers?.forEach(function(stepMarker) {
     stepMarker.addEventListener('click', function() {
-      stepMarker.classList.toogle('done');
+      stepMarker.classList.toggle('done');
     })
   })
 
 }
 
-document.addEventListener('DOMContentLoaded', init);
+document.addEventListener('turbolinks:load', init);
