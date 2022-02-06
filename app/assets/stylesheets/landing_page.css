@@ -34,8 +34,64 @@ header {
 }
 
 section {
-  font-size: 1.5rem;
   padding: 2rem;
-  background-color: #1F1F1F;
-  color: white;
+  background-color: white;
+  color: #1F1F1F;
+  line-height: 2;
+}
+
+.section-wrapper {
+  padding: 0 2rem;
+}
+
+.section-wrapper .welcome,
+.section-wrapper .instructions,
+.section-wrapper .vb-benefits,
+.section-wrapper .personal-note {
+  padding: 20px 0;
+}
+
+.section-wrapper .instructions {
+  background-color: rgba(31, 31, 31, 0.067);
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.section-wrapper .instructions ul {
+  list-style: none;
+}
+
+.section-wrapper .instructions ul li {
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(31, 31, 31, 0.15);;
+}
+
+.section-wrapper .instructions ul li:last-child,
+.links a:last-child {
+  border-bottom: none;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(31, 31, 31, 0.067);
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.links a {
+  text-decoration: none;
+  color: black;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(31, 31, 31, 0.15);
+  transition: 500ms;
+}
+
+.links a:hover {
+  transform: scale( 1.03);
+  transition: 500ms;
+}
+
+.signature {
+  padding: 20px 0;
 }
