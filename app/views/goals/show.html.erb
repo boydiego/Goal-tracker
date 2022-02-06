@@ -1,10 +1,14 @@
 <div class="show-container">
   <div class="show-settings">
     <div class="edit-goal">
-      <%= link_to "Edit Goal", edit_goal_path %>
+      <%= link_to edit_goal_path do %>
+        <i class="far fa-edit"></i>
+      <% end %>
     </div>
     <div class="delete-goal">
-      <%= link_to "Delete Goal", goal_path, method: :delete %>
+      <%= link_to goal_path, method: :delete do %>
+        <i class="far fa-trash-alt"></i>
+      <% end %>
     </div>
   </div>
   <div class="title-container">
@@ -17,8 +21,10 @@
       <p class="steps">
         <%= step.title %>
       </p>
-      <div>
-        <%= link_to "Delete Step", [step.goal, step], method: :delete, data: { confirm: "Are you sure?" } %>
+      <div class="step-deletebox">
+        <%= link_to [step.goal, step], method: :delete, data: { confirm: "Are you sure?" } do %>
+          <i class="far fa-trash-alt"></i>
+        <% end %>
       </div>
     <% end %>
   </div>
@@ -27,9 +33,9 @@
     <div class="steps-form">
       <%= form_with model: [ @goal, @goal.steps.build ] do |form| %>
         <p>
-          <%= form.text_field :title %>
+          <%= form.text_field :title, placeholder: "Step to achieve your goal" %>
         </p>
-        <p>
+        <p class="create-step-submit">
           <%= form.submit %>
         </p>
       <% end %>
