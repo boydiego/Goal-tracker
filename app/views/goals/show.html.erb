@@ -11,8 +11,27 @@
     <h1 class="show-title"><%= @goal.title %></h1>
   </div>
 
+  <div class="steps-container">
+    <% @goal.steps.each do |step| %>
+      <div class="step-marker"></div>
+      <p>
+        <%= step.title %>
+      </p>
+    <% end %>
+  </div>
+
+  <div class="steps-formbox">
+    <div class="steps-form">
+      <%= form_with model: [ @goal, @goal.steps.build ] do |form| %>
+        <p>
+          <%= form.text_field :title %>
+        </p>
+        <p>
+          <%= form.submit %>
+        </p>
+      <% end %>
+    </div>
+  </div>
+
 </div>
 
-<br><br>
-<h2>STEPS and Substeps will be shown here</h2>
-<br>
