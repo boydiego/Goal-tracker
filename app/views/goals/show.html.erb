@@ -14,9 +14,12 @@
   <div class="steps-container">
     <% @goal.steps.each do |step| %>
       <div class="step-marker"></div>
-      <p>
+      <p class="steps">
         <%= step.title %>
       </p>
+      <div>
+        <%= link_to "Delete Step", [step.goal, step], method: :delete, data: { confirm: "Are you sure?" } %>
+      </div>
     <% end %>
   </div>
 
@@ -34,4 +37,3 @@
   </div>
 
 </div>
-
